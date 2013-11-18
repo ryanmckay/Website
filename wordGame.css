@@ -1,0 +1,64 @@
+body{
+	background-color:#ECF1EF;
+}
+
+h1{
+	text-align: center;
+	font-family: 'Share Tech', sans-serif;
+}
+
+/*this modifies the input section*/
+fieldset{
+	font-family: 'Share Tech', sans-serif;
+	border-color: #838B8B;
+	background-color: #E0EEEE;
+	width: 450px;/*length of window(not of input window)*/
+	margin: auto;/*centers the window*/
+}
+
+/*this modifies the "type something" piece of input*/
+label{
+	width: 8em;/*space between "type something" and input window*/
+	/*when you float something you should set the width
+	float: left;/*moves the "type something" to a side*/
+	clear: left;
+	text-align: center;/*centers the text*/
+	padding-right: 1em;/*moves the input window over even more..*/
+	padding-bottom: 2em;/*makes the window taller or shorter*/
+}
+
+label.name{
+	padding-right: 4.10em;
+
+}
+
+label.quest{
+	padding-right: 4.16em;
+}
+
+button{
+	display: block;
+	clear: both;
+	margin-left: auto;/*forces the button to block- centers it*/
+	margin-right: auto;
+}
+
+input{
+	float: center;/*moves the input window*/
+}
+
+#output{/*#refers to a variable*/
+	text-align: center;
+	font-family: 'Share Tech', sans-serif;
+	font-style: oblique;
+}
+
+p{
+	text-align: left;
+	font-family: 'Share Tech', sans-serif;
+	font-size: 80%;
+}
+
+p.ex{
+	text-align: center;
+}
