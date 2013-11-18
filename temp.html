@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>temp</title>
+
+	<h>*In Development*</h>
+	<!--
+	<p class="ex">Controls: WADS</p>
+	-->
+	<script type="text/javascript"
+		src="simpleGame.js"></script>
+
+	<!--begin js-->
+	<script type="text/javascript">
+		var scene;
+		var arrow;
+		var ball;
+		var output;
+
+		function init(){
+			scene = new Scene();
+			scene.hideCursor();
+
+			arrow = new Sprite(scene, "arrow.png", 25, 25);
+			arrow.setAngle(270);
+			arrow.setSpeed(0);
+			arrow.setPosition(100,100);
+			arrow.followMouse = 
+				function(){
+					this.setX(document.mouseX);
+					this.setY(document.mouseY);
+				}
+
+			ball = new Sprite(scene, "redBall.png", 50, 50);
+			ball.setPosition(200,150);
+			ball.setSpeed(0);
+			
+			output = document.getElementById("output");
+			
+			/*if I make it smaller, the ball doesn't adjust to wrapping*/
+			//scene.setSize(500,500);
+			scene.start();
+		}
+
+		/*this is called once per frame*/
+		function update(){
+			scene.clear();
+			arrow.followMouse();
+			checkCollisions();
+			//arrow.setSpeed(0);
+
+			/*
+			if(keysDown[K_A]&&keysDown[K_SPACE]&&keysDown[K_W]){
+				arrow.changeAngleBy(-10);
+				arrow.setSpeed(10);	
+			}
+			else if(keysDown[K_A]){
+				arrow.changeAngleBy(-5);
+			}
+			
+			if(keysDown[K_D]&&keysDown[K_SPACE]&&keysDown[K_W]){
+				arrow.changeAngleBy(10);
+				arrow.setSpeed(10);
+			}
+			else if(keysDown[K_D]){
+				arrow.changeAngleBy(5);
+			}
+			
+			if(keysDown[K_W]){
+				if(keysDown[K_SPACE]){
+					arrow.setSpeed(10);
+				}
+				else arrow.setSpeed(5);
+			}
+			
+			if(keysDown[K_S]){
+				arrow.setSpeed(-5);
+			}
+			*/
+
+			
+			
+			arrow.update();
+			ball.update();
+		}
+
+			function checkCollisions(){
+				if(ball.collidesWith(arrow)){
+					output.innerHTML = "Hit";
+				}
+				else{
+					output.innerHTML = "Miss";
+				}
+			}
+		
+	</script>
+
+</head>
+<body onload = "init()">
+	<div id = "output">empty</div>
+</body>
+</html>
