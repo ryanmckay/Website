@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	
+	<head> 
+		<link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+		<meta charset="UTF-8">
+		<title> Word Game</title>
+		
+		<!--links the css script for indenting and color-->
+		<link rel = "stylesheet"
+			type = "text/css"
+			href = "word.css" />
+
+		<!--links to the javascript script for the greet function-->
+		<script type = "text/javascript" src = "greet.js"></script>
+	</head>
+
+	<body>
+		<h1> Hey. </h1>
+	
+		<form> <!--form is used for input-->
+			<fieldset><!--fieldset is needed for forms?-->
+				<!--label is the text before the input
+					inTest is a variable that holds the input data.
+					it gets received by the javascript function-->		
+				
+				<!--Input for name-->
+				<label class="name"
+					for="name">
+					What is your name?
+				</label>
+				<input type="text" id = "name" placeholder="Empty" \>
+				<br>
+
+				<!--Input for quest-->			
+				<label class="quest"
+					for="name">
+					What is your quest?
+				</label>
+				<input type="text" id = "quest" placeholder="Empty" \>	
+				<br>
+				
+				<!--Input for color-->
+				<label 
+					for="name">
+					What is your favorite color?
+				</label>
+				<input type="text" id = "color" placeholder="Empty" \>
+				<br>
+	
+				<!--creates the button-->
+				<button type = "button"onclick = "greet()">click me</button>
+			</fieldset>
+		</form>
+
+		<!--This is the space where the output goes
+			It's defined by "output", the js uses the var output
+			div is used to define a division in the page
+		-->
+		<div id = "output"> </div>
+		<!--Dice game-->
+		<p class="ex">
+			<a href = "index.html">Home</a>
+		</p>
+
+		
+
+		
+	</body>
+</html>
